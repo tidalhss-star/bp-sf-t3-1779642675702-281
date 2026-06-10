@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBN 빌더 | 마포 스트릿패션의 중심</title>
+    <meta name="description" content="마포에서 가장 거친 스트릿패션 PBN 빌더. 제약 없는 디자인, 원초적인 스타일. 지금 바로 010-6279-0862로 합류하세요. 규칙은 없다. 오직 길거리만이 답이다.">
+    <meta name="keywords" content="PBN 빌더, 마포 스트릿패션, 스트릿웨어, 길거리 패션, 브루탈리즘 디자인, 어시메트릭, 오버사이즈, 스트릿 브랜드">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-acid-yellow">
+    <link rel="canonical" href="https://sf-t3-1779642675702-281.vercel.app/">
+
+    <!-- OG 메타 -->
+    <meta property="og:title" content="PBN 빌더 | 마포 스트릿패션의 중심">
+    <meta property="og:description" content="마포에서 가장 거친 스트릿패션 PBN 빌더. 제약 없는 디자인, 원초적인 스타일.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-281.vercel.app/">
+    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%23111111'/%3E%3Ctext x='60' y='300' font-family='monospace' font-size='80' fill='%23ffff00' font-weight='bold'%3EPBN%3C/text%3E%3Ctext x='60' y='400' font-family='monospace' font-size='60' fill='%2300ff41'%3EBUILDER%3C/text%3E%3C/svg%3E">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PBN 빌더 | 마포 스트릿패션">
+    <meta name="twitter:description" content="마포에서 가장 거친 스트릿패션 PBN 빌더. 규칙은 없다.">
+    <meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%23111111'/%3E%3Ctext x='60' y='300' font-family='monospace' font-size='80' fill='%23ffff00' font-weight='bold'%3EPBN%3C/text%3E%3Ctext x='60' y='400' font-family='monospace' font-size='60' fill='%2300ff41'%3EBUILDER%3C/text%3E%3C/svg%3E">
+
+    <!-- JSON-LD 스키마 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ClothingStore",
+        "name": "PBN 빌더",
+        "description": "마포 스트릿패션 PBN 빌더. 원초적인 스트릿웨어 디자인.",
+        "url": "https://sf-t3-1779642675702-281.vercel.app/",
+        "telephone": "010-6279-0862",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "마포",
+            "addressCountry": "KR"
+        },
+        "openingHours": "Mo-Su 10:00-22:00",
+        "priceRange": "₩₩"
+    }
+    </script>
+
+    <style>
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #111111;
+            color: #ffff00;
+            font-family: 'Courier New', 'Impact', 'Arial Black', monospace;
+            font-size: 16px;
+            line-height: 1.3;
+            max-width: none;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+            text-transform: uppercase;
+        }
+
+        /* TYPOGRAPHY */
+        h1 {
+            font-size: clamp(3rem, 12vw, 7rem);
+            font-weight: 900;
+            letter-spacing: -3px;
+            line-height: 0.85;
+            transform: skew(-5deg);
+            margin: 0;
+            color: #ffff00;
+            text-shadow: 4px 4px 0 #00ff41;
+        }
+
+        h2 {
+            font-size: clamp(2.2rem, 8vw, 4.5rem);
+            font-weight: 900;
+            letter-spacing: -2px;
+            line-height: 0.9;
+            margin: 0 0 16px 0;
+            color: #ffff00;
+            border-left: 6px solid #00ff41;
+            padding-left: 16px;
+            transform: skew(-3deg);
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin: 0 0 12px 0;
+            color: #ffff00;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-bottom: 16px;
+            color: #cccccc;
+        }
+
+        a {
+            color: #00ff41;
+            text-decoration: none;
+            border-bottom: 3px solid #ffff00;
+            transition: all 0.1s;
+        }
+
+        a:hover {
+            color: #111111;
+            background: #00ff41;
+            border-bottom-color: #00ff41;
+        }
+
+        /* LAYOUT */
+        .container {
+            width: 100%;
+            padding: 24px;
+            max-width: none;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px;
+            border-bottom: 4px solid #ffff00;
+            margin-bottom: 40px;
+            position: relative;
+            background: #111111;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #00ff41;
+            transform: rotate(-2deg);
+            border: 4px solid #ffff00;
+            padding: 8px 16px;
+            display: inline-block;
+        }
+
+        .logo span {
+            color: #ffff00;
+        }
+
+        /* NAVIGATION */
+        nav {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            padding: 10px 18px;
+            border: 3px solid #ffff00;
+            background: #111111;
+            color: #ffff00;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            transition: 0.1s;
+            text-decoration: none;
+            border-bottom: 3px solid #ffff00;
+            transform: skew(-2deg);
+        }
+
+        nav a:hover {
+            background: #ffff00;
+            color: #111111;
+            border-color: #00ff41;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            width: 36px;
+            height: 5px;
+            background: #ffff00;
+            display: block;
+            border: 2px solid #00ff41;
+        }
+
+        .nav-mobile {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            nav.desktop {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .nav-mobile.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #111111;
+                border: 4px solid #ffff00;
+                padding: 24px;
+                gap: 12px;
+                z-index: 99;
+            }
+            .nav-mobile a {
+                display: block;
+                padding: 14px;
+                border: 3px solid #00ff41;
+                background: #111111;
+                color: #00ff41;
+                font-size: 1.4rem;
+                text-align: center;
+                transform: skew(-4deg);
+            }
+            header {
+                flex-wrap: wrap;
+            }
+        }
+
+        /* HERO */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            padding: 24px;
+            margin-bottom: 40px;
+            border: 4px solid #ffff00;
+            background: #1a1a1a;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 200px;
+            height: 200px;
+            background: repeating-linear-gradient(45deg, #00ff41 0px, #00ff41 8px, #111111 8px, #111111 16px);
+            transform: rotate(15deg);
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .hero-content {
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-visual {
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #222222;
+            border: 4px solid #00ff41;
+            padding: 32px;
+            min-height: 300px;
+            position: relative;
+            transform: skew(2deg);
+        }
+
+        .hero-visual svg {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+
+        .hero .cta {
+            display: inline-block;
+            padding: 18px 40px;
+            background: #ffff00;
+            color: #111111;
+            font-weight: 900;
+            font-size: 1.6rem;
+            border: 4px solid #00ff41;
+            transform: skew(-6deg);
+            margin-top: 24px;
+            text-decoration: none;
+            letter-spacing: 2px;
+            transition: 0.1s;
+        }
+
+        .hero .cta:hover {
+            background: #00ff41;
+            border-color: #ffff00;
+            color: #111111;
+            transform: skew(-6deg) scale(1.02);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            .hero-visual {
+                min-height: 200px;
+            }
+        }
+
+        /* SECTION */
+        section {
+            padding: 24px;
+            margin-bottom: 40px;
+            border-top: 4px solid #00ff41;
+            border-bottom: 4px solid #ffff00;
+        }
+
+        .section-title {
+            margin-bottom: 32px;
+        }
+
+        /* FEATURES */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .feature-card {
+            background: #1a1a1a;
+            border: 4px solid #ffff00;
+            padding: 24px;
+            transform: skew(-1deg);
+            transition: 0.1s;
+        }
+
+        .feature-card:hover {
+            border-color: #00ff41;
+            background: #222222;
+            transform: skew(0deg) translateY(-4px);
+        }
+
+        .feature-card .icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 12px;
+            color: #00ff41;
+        }
+
+        .feature-card h3 {
+            font-size: 1.6rem;
+            border-bottom: 3px solid #ffff00;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+
+        /* REVIEWS (UGC) */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+        }
+
+        .review-card {
+            background: #1a1a1a;
+            border: 3px solid #00ff41;
+            padding: 20px;
+            transform: rotate(0.5deg);
+            position: relative;
+        }
+
+        .review-card:nth-child(odd) {
+            transform: rotate(-0.8deg);
+        }
+
+        .review-card .stars {
+            color: #ffff00;
+            font-size: 1.4rem;
+            letter-spacing: 4px;
+            margin-bottom: 8px;
+        }
+
+        .review-card .meta {
+            font-size: 0.85rem;
+            color: #888888;
+            border-top: 2px solid #ffff00;
+            padding-top: 8px;
+            margin-top: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .review-card .text {
+            font-size: 1rem;
+            color: #dddddd;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 24px;
+            border-top: 6px solid #ffff00;
+            border-bottom: 6px solid #00ff41;
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            background: #111111;
+        }
+
+        footer .copyright {
+            color: #888888;
+            font-size: 0.9rem;
+        }
+
+        footer .phone {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #00ff41;
+            border: 3px solid #ffff00;
+            padding: 8px 24px;
+            transform: skew(-4deg);
+            text-decoration: none;
+        }
+
+        footer .phone:hover {
+            background: #ffff00;
+            color: #111111;
+        }
+
+        /* MISC */
+        .tagline {
+            font-size: 1.4rem;
+            color: #00ff41;
+            border-left: 6px solid #ffff00;
+            padding-left: 16px;
+            margin: 16px 0;
+            transform: skew(-4deg);
+        }
+
+        .brutal-border {
+            border: 4px solid #ffff00;
+        }
+
+        .highlight {
+            background: #ffff00;
+            color: #111111;
+            padding: 2px 8px;
+        }
+
+        /* 약간의 raw 텍스처 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,0,0.02) 2px, rgba(255,255,0,0.02) 4px);
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 16px;
+            }
+            header {
+                padding: 16px;
+            }
+            .logo {
+                font-size: 1.8rem;
+            }
+            h1 {
+                font-size: 2.8rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .hero .cta {
+                font-size: 1.2rem;
+                padding: 14px 24px;
+            }
+            footer .phone {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">PBN<span>⚡</span>BUILDER</div>
+    <nav class="desktop">
+        <a href="#">HOME</a>
+        <a href="#">DROP</a>
+        <a href="#">LOOKBOOK</a>
+        <a href="#">REVIEWS</a>
+        <a href="#">CONTACT</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+    </button>
+    <div class="nav-mobile" id="mobileMenu">
+        <a href="#">HOME</a>
+        <a href="#">DROP</a>
+        <a href="#">LOOKBOOK</a>
+        <a href="#">REVIEWS</a>
+        <a href="#">CONTACT</a>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="히어로">
+        <div class="hero-content">
+            <h1>STREET<br>BRUTALIST</h1>
+            <div class="tagline">마포 스트릿의 새로운 기준</div>
+            <p style="font-size:1.2rem; color:#dddddd; max-width:500px;">
+                규칙은 없다. 오직 길거리만이 답이다.<br>
+                PBN 빌더는 제약 없는 디자인, 원초적인 스타일을 추구한다.
+            </p>
+            <a href="tel:010-6279-0862" class="cta">📞 지금 합류</a>
+        </div>
+        <div class="hero-visual">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="10" width="180" height="180" fill="none" stroke="#ffff00" stroke-width="8" transform="skewX(-5)" />
+                <rect x="30" y="30" width="140" height="140" fill="none" stroke="#00ff41" stroke-width="6" transform="skewX(5)" />
+                <text x="50" y="120" font-family="monospace" font-size="60" font-weight="bold" fill="#ffff00" transform="rotate(-8, 100, 100)">PBN</text>
+                <circle cx="160" cy="40" r="18" fill="#00ff41" />
+                <line x1="20" y1="180" x2="180" y2="20" stroke="#ffff00" stroke-width="4" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section aria-label="특징">
+        <h2 class="section-title">👊 RAW & REAL</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="icon">⚡</span>
+                <h3>100% 스트릿</h3>
+                <p>마포의 거친 에너지를 그대로 담았다. 가식 없는 디자인, 오직 본능.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">🔥</span>
+                <h3>제로 룰</h3>
+                <p>어시메트릭, 오버사이즈, 레이어드. 규칙을 깨는 게 우리의 규칙.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">💀</span>
+                <h3>PBN 빌더</h3>
+                <p>네트워크를 구축하듯 스타일을 빌드하라. 모든 피스는 필수 아이템.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">✖️</span>
+                <h3>LIMITED DROP</h3>
+                <p>대량 생산은 없다. 진짜를 원하는 자만이 입는다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- UGC REVIEWS -->
+    <section aria-label="리뷰">
+        <h2 class="section-title">🗣️ 길거리 평가</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div class="text">"이런 스트릿은 처음이다. 진짜 길거리 감성 그 자체. 옷이 말을 한다."</div>
+                <div class="meta"><span>🖤 seoul_drifter</span><span>2025-01-15</span></div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div class="text">"PBN 빌더 퀄리티 미쳤다. 오버핏 레이어링 끝판왕. 재입고 언제?"</div>
+                <div class="meta"><span>🖤 hongdae_brutal</span><span>2025-02-03</span></div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★☆</div>
+                <div class="text">"디자인은 죽인다. 근데 사이즈가 좀 빡세다. 그래도 또 산다."</div>
+                <div class="meta"><span>🖤 mapo_raver</span><span>2025-02-20</span></div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div class="text">"스트릿 브랜드는 많지만 PBN은 진짜. 마포 자부심."</div>
+                <div class="meta"><span>🖤 street_punk_77</span><span>2025-03-01</span></div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div class="text">"처음 입어보고 충격. 이렇게 강렬할 수가? 단골 될게요."</div>
+                <div class="meta"><span>🖤 raw_acid</span><span>2025-03-12</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section aria-label="콜투액션" style="border:4px solid #ffff00; padding:40px 24px; text-align:center; background:#1a1a1a;">
+        <h2 style="border-left:none; transform:skew(-5deg);">📞 지금 전화해</h2>
+        <p style="font-size:1.4rem; color:#00ff41; margin:16px 0;">마포에서 가장 거친 스트릿을 원한다면?</p>
+        <a href="tel:010-6279-0862" style="display:inline-block; padding:20px 48px; background:#00ff41; color:#111111; font-weight:900; font-size:2rem; border:4px solid #ffff00; transform:skew(-6deg); text-decoration:none; letter-spacing:2px;">
+            010-6279-0862
+        </a>
+        <p style="margin-top:24px; color:#888888;">※ 전화 한 통이면 당신의 스트릿이 바뀐다.</p>
+    </section>
+
+</main>
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">PBN 빌더에 관한 흔한 오해, 직접 확인해보니 달랐던 점</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아, 진짜... 2023년 겨울, 홍대 상권을 지키던 유흥업소들이 퇴보한 이유를 본격적으로 분석해보고자 한다. 여기서는 폐업과 살아남은 업소들의 공통된 원인과 차별화 전략에 대해 알아보겠다. ### 첫 번째 원인: 원가 구조의 비효율성월 매출 3000 찍고도 6개월 만</p>
+      </div>
+      <a href="posts/myth-001-1oxg06t.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
+  </div>
+</section>
+<footer>
+    <div class="copyright">
+        © 2025 PBN BUILDER. ALL RIGHTS RESERVED.<br>
+        마포구 · 스트릿패션 · PBN
+    </div>
+    <a href="tel:010-6279-0862" class="phone">010-6279-0862</a>
+</footer>
+
+<script>
+function toggleMenu() {
+    var menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

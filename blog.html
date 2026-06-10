@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBN 빌더 | 블로그 — 거리에서 본 진짜</title>
+    <meta name="description" content="마포에서 가장 거친 스트릿패션 PBN 빌더. 제약 없는 디자인, 원초적인 스타일. 지금 바로 010-6279-0862로 합류하세요. 규칙은 없다. 오직 길거리만이 답이다.">
+    <meta name="keywords" content="PBN 빌더, 마포 스트릿패션, 스트릿웨어, 길거리 패션, 브루탈리즘 디자인, 어시메트릭, 오버사이즈, 스트릿 브랜드">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-acid-yellow">
+    <link rel="canonical" href="https://sf-t3-1779642675702-281.vercel.app/">
+    <meta property="og:title" content="PBN 빌더 | 블로그 — 거리에서 본 진짜">
+    <meta property="og:description" content="마포에서 가장 거친 스트릿패션 PBN 빌더. 제약 없는 디자인, 원초적인 스타일. 지금 바로 010-6279-0862로 합류하세요. 규칙은 없다. 오직 길거리만이 답이다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-281.vercel.app/">
+    <meta property="og:image" content="https://sf-t3-1779642675702-281.vercel.app/og-image.jpg">
+    <meta property="og:site_name" content="PBN 빌더">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PBN 빌더 | 블로그 — 거리에서 본 진짜">
+    <meta name="twitter:description" content="마포에서 가장 거친 스트릿패션 PBN 빌더. 제약 없는 디자인, 원초적인 스타일. 지금 바로 010-6279-0862로 합류하세요. 규칙은 없다. 오직 길거리만이 답이다.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial Black', 'Impact', sans-serif;
+            background: #0a0a0a;
+            color: #f5f5f5;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            text-transform: uppercase;
+            letter-spacing: -3px;
+            line-height: 0.9;
+            color: #f5f5f5;
+            text-shadow: 4px 4px 0 #ffd700;
+        }
+        h2 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            border-left: 6px solid #ffd700;
+            padding-left: 20px;
+            margin: 60px 0 30px;
+        }
+        h3 {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 30px 0 15px;
+        }
+        p {
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+        a {
+            color: #ffd700;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        a:hover {
+            border-bottom-color: #ffd700;
+            color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            padding: 30px 0;
+            border-bottom: 3px solid #ffd700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+        .logo span {
+            color: #ffd700;
+        }
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        nav a {
+            color: #f5f5f5;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: none;
+            position: relative;
+        }
+        nav a:hover {
+            color: #ffd700;
+            border-bottom: none;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ffd700;
+            transition: 0.3s;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background: #f5f5f5;
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #111;
+                padding: 20px;
+                position: absolute;
+                top: 90px;
+                left: 0;
+                z-index: 100;
+            }
+            nav.active {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+            header {
+                position: relative;
+            }
+        }
+        .tel-link {
+            display: inline-block;
+            background: #ffd700;
+            color: #0a0a0a;
+            padding: 10px 25px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            transition: 0.3s;
+        }
+        .tel-link:hover {
+            background: #fff;
+            color: #0a0a0a;
+            border-bottom: none;
+        }
+        .blog-post {
+            max-width: 800px;
+            margin: 60px auto;
+            border: 2px solid #ffd700;
+            padding: 40px;
+            background: #111;
+        }
+        .blog-post .meta {
+            font-family: 'Courier New', monospace;
+            color: #ffd700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+        .blog-post .meta span {
+            margin-right: 20px;
+        }
+        .blog-post h1 {
+            margin-bottom: 30px;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+        }
+        .blog-post p {
+            font-size: 1.05rem;
+        }
+        .blog-post blockquote {
+            border-left: 4px solid #ffd700;
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #ffd700;
+            font-size: 1.2rem;
+        }
+        .blog-post .highlight {
+            background: #ffd700;
+            color: #0a0a0a;
+            padding: 2px 8px;
+            font-weight: 900;
+        }
+        .blog-post .divider {
+            width: 100%;
+            height: 2px;
+            background: #333;
+            margin: 40px 0;
+        }
+        .blog-post .cta-box {
+            background: #1a1a1a;
+            border: 2px dashed #ffd700;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .blog-post .cta-box p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        footer {
+            border-top: 3px solid #ffd700;
+            padding: 40px 0;
+            margin-top: 80px;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            color: #666;
+        }
+        footer a {
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">PBN <span>빌더</span></div>
+            <div class="hamburger" onclick="document.querySelector('nav').classList.toggle('active')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <a href="/">홈</a>
+                <a href="/about">소개</a>
+                <a href="/blog">블로그</a>
+                <a href="/contact">연락처</a>
+                <a href="tel:01062790862" class="tel-link">010-6279-0862</a>
+            </nav>
+        </header>
+
+        <div class="blog-post">
+            <div class="meta">
+                <span>2025.03.24</span>
+                <span>#스트릿패션</span>
+                <span>#PBN빌더</span>
+            </div>
+            <h1>거리는 절대 거짓말하지 않는다</h1>
+            
+            <p>마포 골목을 걸어본 적 있냐? 새벽 3시, 가로등 하나 없는 뒷골목. 거기서 너는 진짜를 마주한다. 화려한 쇼윈도나 인스타 필터로 포장된 가짜들은 발도 못 들인다. 길거리는 원초적이다. 거짓말을 용납하지 않는다. 그리고 바로 여기, <span class="highlight">PBN 빌더</span>가 태어난 이유다.</p>
+
+            <p>요즘 스트릿 브랜드들을 봐라. 다 똑같다. 오버사이즈 후드에 박시한 티셔츠, 거기다 대충 로고 하나 던져놓고 '스트릿'이라고 우긴다. 개소리다. 스트릿은 그런 게 아니다. 스트릿은 규칙을 부수는 거다. 대칭을 깨고, 길이를 비틀고, 소재를 뒤집는 거다. 네가 입는 옷이 네 목소리가 되어야 한다. 조용히 순종하는 옷은 필요 없다.</p>
+
+            <blockquote>"길거리는 답을 알고 있다. 너는 그냥 들으면 된다."</blockquote>
+
+            <p>우리 팀은 매일 밤 마포를 걷는다. 홍대 앞 번화가가 아니다. 합정동 공장 골목, 상수동 폐건물, 망원동 주택가 사이사이. 거기서 본 진짜 스트릿을 옷에 새긴다. 어깨선이 한쪽으로 떨어지는 재킷, 지퍼가 비스듬히 박힌 카고 팬츠, 밑단이 찢긴 채로 남은 티셔츠. 이게 <span class="highlight">PBN 빌더</span>의 방식이다. 완벽함을 거부하고, 날것 그대로를 밀어붙인다.</p>
+
+            <p>어느 브랜드가 이런 걸 하겠냐? 감히. 그들은 안전한 걸 원한다. 팔리는 걸 원한다. 하지만 우리는 묻는다: <strong>네가 진짜로 원하는 게 뭔데?</strong> 남들이 입으니까? 유행이니까? 그딴 건 여기서 통하지 않는다. 너만의 스타일을 만들어라. 규칙은 없다. 오직 길거리만이 답이다.</p>
+
+            <div class="divider"></div>
+
+            <h3>이번 시즌, 이렇게 부숴라</h3>
+            <p>레이어링에 집착하지 마라. 하나로 터트려라. 어시메트릭 실루엣 하나면 충분하다. 컬러는 칙칙한 게 답이다. 검정, 회색, 군청. 거기에 네온 한 방. 포인트는 항상 예상치 못한 곳에 둬라. 소매 끝자락, 뒷목선, 옆트임. 대중이 예상하는 그곳은 이미 죽은 곳이다.</p>
+
+            <p>그리고 신발. 제발 깔끔한 흰색 스니커즈 좀 그만 신어라. 길거리는 더럽다. 비 맞고, 흙 튀고, 밟힌다. 그 흔적이 곧 스타일이다. 더러운 컨버스, 긁힌 부츠, 낡은 워커. 그게 진짜다.</p>
+
+            <div class="cta-box">
+                <p><strong>지금 합류해라. 기다리지 마라.</strong></p>
+                <p>마포에서 가장 거친 스트릿패션 PBN 빌더. 너의 스타일을 증명할 시간이다.</p>
+                <a href="tel:01062790862" class="tel-link">010-6279-0862</a>
+                <p style="margin-top:15px; font-size:0.8rem;">규칙은 없다. 오직 길거리만이 답이다.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 PBN 빌더 — 마포 스트릿패션의 중심. 모든 규칙은 길거리가 정한다.</p>
+            <p><a href="tel:01062790862">010-6279-0862</a> | 서울 마포구</p>
+        </footer>
+    </div>
+
+    <script>
+        // Hamburger menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+        // Close menu on link click (mobile)
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('nav').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
