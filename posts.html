@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · sf-t3-1779642675702-281</title>
+  <meta name="description" content="sf-t3-1779642675702-281에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sf-t3-1779642675702-281.maphoshirts.xyz/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ body {
+ background: #0a0a0a;
+ color: #e0e0e0;
+ font-family: 'Courier New', monospace;
+ line-height: 1.4;
+ min-height: 100vh;
+ overflow-x: hidden;
+ }
+ h1 {
+ font-size: 4rem;
+ font-weight: 900;
+ letter-spacing: -2px;
+ text-transform: uppercase;
+ color: #f0e800;
+ text-shadow: 4px 4px 0 #000, 6px 6px 0 #ff0040;
+ margin-bottom: 1.5rem;
+ word-break: break-word;
+ }
+ h2 {
+ font-size: 2.2rem;
+ font-weight: 800;
+ text-transform: uppercase;
+ color: #f0e800;
+ border-left: 6px solid #ff0040;
+ padding-left: 1rem;
+ margin: 2.5rem 0 1rem;
+ }
+ h3 {
+ font-size: 1.4rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ color: #f0e800;
+ margin: 1.8rem 0 0.8rem;
+ }
+ p {
+ font-size: 1rem;
+ margin-bottom: 1.2rem;
+ color: #b0b0b0;
+ max-width: 720px;
+ }
+ a {
+ color: #f0e800;
+ text-decoration: underline wavy #ff0040 2px;
+ transition: all 0.2s;
+ }
+ a:hover {
+ color: #ff0040;
+ text-decoration-color: #f0e800;
+ }
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 24px;
+ }
+ header {
+ background: #111;
+ border-bottom: 4px solid #f0e800;
+ padding: 20px 0;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ }
+ .logo {
+ font-size: 2rem;
+ font-weight: 900;
+ text-transform: uppercase;
+ color: #f0e800;
+ letter-spacing: -1px;
+ }
+ .logo span {
+ color: #ff0040;
+ font-style: italic;
+ }
+ nav {
+ display: flex;
+ gap: 24px;
+ align-items: center;
+ }
+ nav a {
+ font-size: 0.9rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ color: #e0e0e0;
+ text-decoration: none;
+ padding: 6px 12px;
+ border: 2px solid transparent;
+ transition: 0.2s;
+ }
+ nav a:hover {
+ border-color: #f0e800;
+ color: #f0e800;
+ background: #000;
+ }
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+ gap: 5px;
+ }
+ .hamburger span {
+ width: 28px;
+ height: 3px;
+ background: #f0e800;
+ display: block;
+ }
+ .header-inner {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .tel-link {
+ font-size: 1.1rem;
+ font-weight: 800;
+ color: #ff0040;
+ background: #000;
+ padding: 8px 16px;
+ border: 2px solid #f0e800;
+ text-decoration: none;
+ display: inline-block;
+ transition: 0.2s;
+ }
+ .tel-link:hover {
+ background: #f0e800;
+ color: #000;
+ border-color: #ff0040;
+ }
+ main {
+ padding: 60px 0 80px;
+ }
+ .section-block {
+ margin-bottom: 60px;
+ border-bottom: 2px dashed #333;
+ padding-bottom: 40px;
+ }
+ .card-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+ gap: 24px;
+ margin: 30px 0;
+ }
+ .card {
+ background: #151515;
+ border: 2px solid #2a2a2a;
+ padding: 24px;
+ transition: 0.3s;
+ }
+ .card:hover {
+ border-color: #f0e800;
+ transform: translate(-2px, -2px);
+ box-shadow: 6px 6px 0 #ff0040;
+ }
+ .card h3 {
+ margin-top: 0;
+ font-size: 1.3rem;
+ }
+ .card p {
+ font-size: 0.9rem;
+ }
+ .info-highlight {
+ background: #000;
+ border: 3px solid #f0e800;
+ padding: 32px;
+ margin: 30px 0;
+ }
+ .info-highlight p {
+ font-size: 1.2rem;
+ color: #f0e800;
+ font-weight: 700;
+ }
+ .faq-item {
+ border-bottom: 1px solid #2a2a2a;
+ padding: 20px 0;
+ }
+ .faq-item strong {
+ color: #f0e800;
+ font-size: 1.1rem;
+ display: block;
+ margin-bottom: 8px;
+ }
+ .faq-item p {
+ margin: 0;
+ }
+ footer {
+ background: #111;
+ border-top: 4px solid #ff0040;
+ padding: 40px 0;
+ text-align: center;
+ }
+ footer p {
+ color: #666;
+ font-size: 0.8rem;
+ max-width: none;
+ }
+ @media (max-width: 768px) {
+ h1 {
+ font-size: 2.5rem;
+ }
+ h2 {
+ font-size: 1.6rem;
+ }
+ nav {
+ display: none;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ right: 0;
+ background: #111;
+ flex-direction: column;
+ padding: 20px;
+ border-bottom: 4px solid #f0e800;
+ }
+ nav.active {
+ display: flex;
+ }
+ .hamburger {
+ display: flex;
+ }
+ .tel-link {
+ font-size: 0.9rem;
+ padding: 6px 12px;
+ }
+ .card-grid {
+ grid-template-columns: 1fr;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · sf-t3-1779642675702-281">
+  <meta property="og:description" content="sf-t3-1779642675702-281에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sf-t3-1779642675702-281.maphoshirts.xyz/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="container header-inner">
+ <div class="logo">PBN<span>빌더</span></div>
+ <nav id="mainNav">
+ <a href="/">홈</a>
+ <a href="/info">정보</a>
+ <a href="/lookbook">룩북</a>
+ <a href="/contact">연락</a>
+ 
+ </nav>
+ <div class="hamburger" onclick="document.getElementById('mainNav').classList.toggle('active')">
+ 
+ 
+ 
+ </div>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 33개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-1536.html">마포 길거리 패션에서 보이는 실용주의적 겹쳐 입기 스타일에 대한 관찰과 평가</a>
+        <p class="post-item__summary">마포의 길거리를 메운 옷차림은 멋보다 생존과 효율에 초점이 맞춰져 있다. 화려한 색채나 거추장스러운 장식 대신 어두운 무채색 계열의 방수 기능성 외투와 주머니가 많이 달린 하의가 주류를 이룬다. 이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-291.html">마포 스트릿패션 무채색 레이어링 분석</a>
+        <p class="post-item__summary">마포 거리에서 포착되는 패션의 주류는 무채색 기반의 레이어링이다. 검은색과 회색, 흰색을 겹쳐 입어 부피감을 만드는 방식이 지배적이다. 단순한 색 조합이지만 옷감의 질감을 다르게 배치해 단조로움을 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0237.html">마포 스트릿패션 브랜드라면 주목할 PBN 빌더 활용법</a>
+        <p class="post-item__summary">홍대와 합정, 상수동을 아우르는 마포는 전국에서 가장 스트릿패션 감성이 살아있는 지역 중 하나다. 하지만 온라인에서 눈에 띄는 건 오프라인보다 훨씬 어렵다. PBN 빌더는 여러 개의 사이트를 유기적</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0238.html">마포의 도심에서 PBN 빌더로 트렌디 스트릿패션 브랜드를 성장시키다</a>
+        <p class="post-item__summary">마포에 소개된 내 브랜드는 육상 스타일의 스포티한 스트릿패션을 선보입니다. PBN 빌더를 접목해 온라인 유입량을 높이고, 고객 경험을 강화하고자 합니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0239.html">마포 스트릿패션 브랜드를 위한 PBN 빌더 활용법</a>
+        <p class="post-item__summary">마포 지역의 스트릿패션 브랜드라면 온라인 가시성 확보가 매출과 직결되는 경우가 많다. 하지만 치열한 검색 경쟁 속에서 상위 노출을 유지하는 것은 생각보다 까다롭다. 이럴 때 필요한 것이 체계적인 백</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0240.html">마포 스트릿패션을 위한 PBN 빌더: 디지털 융합 전략</a>
+        <p class="post-item__summary">PBN 빌더는 마포 지역에 특화된 스트릿패션 브랜드를 대상으로, 온라인 오피스 공간을 효율적으로 활용할 수 있는 맞춤형 솔루션을 제공한다. 브랜드는 한정된 소규모 매장을 필수적으로 유지하면서도, 디</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0241.html">PBN 빌더로 시작하는 마포 스트릿패션 온라인 전략</a>
+        <p class="post-item__summary">마포 스트릿패션 브랜드의 온라인 영향력이 갈수록 중요해지고 있다. PBN 빌더는 다양한 키워드로 최적화된 사이트 네트워크를 운영하며 로컬 패션 씬에서의 입지를 효과적으로 다질 수 있는 도구다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0242.html">마포에서 PBN 빌더가 안내하는 스트릿패션의 성장 전략</a>
+        <p class="post-item__summary">PBN 빌더는 마포의 중소형 스트릿패션 브랜드를 위해 SEO와 광고를 동시에 최적화하는 플랫폼입니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0243.html">마포 스트릿패션 브랜드를 위한 PBN 빌더 활용법</a>
+        <p class="post-item__summary">마포에서 스트릿패션 브랜드를 운영한다면 온라인 가시성 확보가 가장 큰 과제일 것이다. 홍대를 중심으로 한 마포의 패션 scene은 경쟁이 치열하고, 소비자들은 새로운 브랜드를 끊임없이 찾는다. 이런</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0244.html">마포 스트릿패션의 미래, PBN 빌더가 열어주는 새로운 비즈니스 모델</a>
+        <p class="post-item__summary">마포의 패션 발효지에서 PBN 빌더가 제공하는 전자 상거래 솔루션은 보급형 브랜드에 비해 차별화된 접근 방식을 담아낸다. 소량 생산 혹은 시즌 한정 라인업을 전세부적으로 관리하면서 재고 부담을 크게</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0245.html">마포 스트릿패션 브랜드를 위한 PBN 빌더 활용 전략</a>
+        <p class="post-item__summary">마포 일대에서 스트릿패션 브랜드를 운영한다면 온라인에서의 존재감이 매출과 직결됩니다. 홍대와 합정을 중심으로 한 패션 시장은 경쟁이 치열해 차별화된 접근이 필요합니다. 오프라인 매장 방문을 유도하려</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0246.html">PBN 빌더, 마포 스트릿패션에 새로운 SEO 솔루션</a>
+        <p class="post-item__summary">PBN 빌더는 마포의 스트릿패션 브랜드를 위한 브랜드별 맞춤형 SEO 솔루션입니다. 각 가맹점마다 독특한 URL과 콘텐츠를 자동으로 생성해 검색 노출을 극대화합니다. 앞으로의 온라인 트렌드에 대응하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0247.html">마포 스트릿패션 브랜드와 PBN 빌더 활용 전략</a>
+        <p class="post-item__summary">마포는 스트릿패션 문화의 중심지로 자리 잡았다. 홍대와 연남동, 합정 일대에서 활동하는 젊은 디자이너들의 브랜드가 계속해서 등장하고 있다. 이들은 오프라인에서뿐 아니라 온라인에서도 존재감을 키우려고</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0248.html">PBN 빌더로 마포 스트릿패션 브랜드를 한 단계 끌어올리다</a>
+        <p class="post-item__summary">마포는 스트릿패션의 핫스팟이며, 온라인 브랜드에게 마케팅의 황금기다. PBN 빌더는 지역 맞춤 SEO와 빠른 구축이 가능해 현지 고객을 정확히 겨냥한다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0249.html">마포 스트릿패션 브랜드가 PBN 빌더로 온라인 입지를 넓히는 법</a>
+        <p class="post-item__summary">스트릿패션 브랜드가 밀집한 마포 지역에서 온라인 채널의 중요성은 갈수록 커지고 있다. 과거에는 SNS와 오픈마켓 중심의 운영이 대부분이었지만, 최근에는 자체 사이트를 통해 브랜드 아이덴티티를 직접 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0250.html">마포 스트릿패션, PBN 빌더로 새로운 트렌드 리더 되다</a>
+        <p class="post-item__summary">마포의 트렌드가 언제나 논리적이지만, 이번에 소개할 ‘PBN 빌더’는 새로운 차원의 도시 스타일을 제안합니다. 이 도구는 블로그와 SNS를 연결해 브랜드 노출을 극대화하고, 동시에 지역 소비자와 연</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0275.html">PBN 빌더 활용 시 마포 럭셔리 단체 가라오케 예약 가이드 및 인원 구성 노하우</a>
+        <p class="post-item__summary">성공적인 모임을 계획하려면 인원 구성, 예산 책정, 그리고 적절한 장소 선정이라는 세 가지 필수 충족 조건이 선행되어야 합니다. 특히 마포 지역에서 품격 있는 자리를 마련할 때는 인원 규모에 맞는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0276.html">PBN 빌더 시스템의 분석 기법과 구글 틈새 키워드 트래픽 외환 거래 전략 활용법</a>
+        <p class="post-item__summary">수많은 웹사이트들 사이에서 귀하의 플랫폼은 어떤 경쟁력을 갖추고 계십니까? 단순히 트래픽을 늘리는 것에 그치지 않고, 특정 분야의 권위를 확보하기 위해 어떤 전략적 선택을 하고 있는지 진지하게 자문</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0277.html">PBN 빌더 활용하는 구글 알고리즘 고신용 도메인 보증 카드 발급 과정</a>
+        <p class="post-item__summary">웹사이트 운영자들은 안정적인 검색 노출을 위해 고신용 도메인을 확보하는 데 주력합니다. 특히 PBN 빌더 시스템을 운용할 때 도메인 자체의 신용 점수는 전체 네트워크의 품질을 결정하는 핵심 요소가 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0278.html">PBN 빌더 전문가를 위한 마포 단체 회식용 대형 룸 노래방 가격 정보 비교</a>
+        <p class="post-item__summary">마포 지역은 비즈니스 파트너와 함께하는 행사가 잦은 곳으로, 적절한 회식 장소를 찾는 것이 업무의 연장선이 되기도 합니다. 특히 대형 인원이 이동할 경우 인프라가 잘 갖춰진 장소를 미리 섭외하는 것</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
